@@ -17,7 +17,14 @@ var res = {
   laser_particl2: "res/effect/laser_texture2.plist",
   laser_particl3: "res/effect/laser_texture3.plist",
   exp_particl1: "res/effect/exp_texture1.plist",
-  exp_particl2: "res/effect/exp_texture2.plist"
+  exp_particl2: "res/effect/exp_texture2.plist",
+  Darks_texture1: "res/effect/Darks_texture1.plist",
+  Darks_texture2: "res/effect/Darks_texture2.plist",
+  Dark_texture1: "res/effect/Dark_texture1.plist",
+  Dark_texture2: "res/effect/Dark_texture2.plist",
+  Dark_texture3: "res/effect/Dark_texture3.plist",
+  Dark_texture4: "res/effect/Dark_texture4.plist",
+  Dark_texture5: "res/effect/Dark_texture5.plist"
 };
 
 var g_resources = [];
