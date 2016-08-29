@@ -95,14 +95,14 @@ var particleLayer = cc.Layer.extend({
     var y = [200, 200, 200, 200, 200, 200, 200];
     var num2 = [3, 6];
     for(var i = 1; i < num2[attrib]; i++){
-      var sName = "res." + skillName[attrib] + "_particl" + i;
+      var sName = "res." + skillName[attrib] + "_texture" + i;
       var tempParticle = new cc.ParticleSystem(eval(sName));
       tempParticle.setPosition(x[num], y[num]);
       num++;
       if(num > 2) num = 0;
       tempParticle.setDuration(5);
       this.addChild(tempParticle, 20);
-      tempParticle.setAutoRemoveOnFinish(true);
+      tempParticle.setAutoRemoveOnFinish(true);//
     }
   },
 });
