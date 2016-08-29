@@ -1,6 +1,6 @@
 var size;
 var num = 0;
-var skillnum = [380, 380, 10];
+var skillnum = [350, 450];
 var suu = 0;
 var gameScene = cc.Scene.extend({
   onEnter: function() {
@@ -33,7 +33,7 @@ var fieldLayer = cc.Layer.extend({
 
     var size = cc.director.getWinSize();
 
-    var sprite = cc.Sprite.create(res.ss_BattleScene_bg1);
+    var sprite = cc.Sprite.create(res.ss_BattleScene_bg3);
     sprite.setPosition(size.width / 2, size.height / 2);
     sprite.setScale(0.8);
     this.addChild(sprite, 0);
@@ -47,13 +47,13 @@ var charaLayer = cc.Layer.extend({
 
     //火属性のキャラクター
     var sprite10 = cc.Sprite.create(res.chara_princessselect_10);
-    sprite10.setPosition(size.width * 0.3, size.height * 0.3);
+    sprite10.setPosition(size.width * 0.4, size.height * 0.4);
     sprite10.setScale(0.8);
     this.addChild(sprite10, 0);
 
 
     var sprite11 = cc.Sprite.create(res.chara_enemy_4);
-    sprite11.setPosition(size.width * 0.5, size.height * 0.4);
+    sprite11.setPosition(size.width * 0.8, size.height * 0.4);
     sprite11.setScale(0.8);
     this.addChild(sprite11, 0);
   }
@@ -91,15 +91,15 @@ var particleLayer = cc.Layer.extend({
 //属性とスキルレベルと座標を与えてパーティクルを生成する関数
   skillParticle: function(attrib) {
     var skillName = ["Darks", "Dark"];
-    var x = [472, 472, 472, 472, 472, 472, 472];
-    var y = [200, 200, 200, 200, 200, 200, 200];
-    var num2 = [3, 6];
+    var x = [439, 439, 439, 439, 439, 439, 439];
+    var y = [174, 174, 174, 174, 174, 174, 174];
+    var num2 = [5, 4];
     for(var i = 1; i < num2[attrib]; i++){
-      var sName = "res." + skillName[attrib] + "_particl" + i;
+      var sName = "res." + skillName[attrib] + "_texture" + i;
       var tempParticle = new cc.ParticleSystem(eval(sName));
       tempParticle.setPosition(x[num], y[num]);
       num++;
-      if(num > 2) num = 0;
+      if(num > 6) num = 0;
       tempParticle.setDuration(5);
       this.addChild(tempParticle, 20);
       tempParticle.setAutoRemoveOnFinish(true);
